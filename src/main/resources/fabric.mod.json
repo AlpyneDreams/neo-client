@@ -21,6 +21,9 @@
   "entrypoints": {
     "client": [
       "meteordevelopment.meteorclient.MeteorClient"
+    ],
+    "meteor": [
+      "lol.neoclient.NeoClient"
     ]
   },
   "mixins": [
@@ -29,7 +32,8 @@
     "meteor-client-indigo.mixins.json",
     "meteor-client-sodium.mixins.json",
     "meteor-client-lithium.mixins.json",
-    "meteor-client-viafabricplus.mixins.json"
+    "meteor-client-viafabricplus.mixins.json",
+    "neoclient.mixins.json"
   ],
   "accessWidener": "meteor-client.accesswidener",
   "custom": {
