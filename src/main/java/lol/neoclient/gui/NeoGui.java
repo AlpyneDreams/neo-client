@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import imgui.ImGui;
 import imgui.flag.ImGuiTableColumnFlags;
 import imgui.flag.ImGuiTableFlags;
+import imgui.flag.ImGuiWindowFlags;
 import imgui.type.ImBoolean;
 import lol.neoclient.NeoClient;
 import lol.neoclient.NeoClient.PacketInfo;
@@ -20,7 +21,7 @@ public class NeoGui {
 
     public void draw() {
 
-        if (ImGui.begin("Debug")) {
+        if (ImGui.begin("Debug", ImGuiWindowFlags.AlwaysAutoResize)) {
             ImGui.checkbox("Enable Debug Renderers", DebugRendererSettings.enabled);
             ImGui.separator();
             ImGui.beginDisabled(!DebugRendererSettings.enabled.get());

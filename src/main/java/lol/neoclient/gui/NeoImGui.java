@@ -5,6 +5,8 @@ import imgui.ImGui;
 import imgui.flag.ImGuiConfigFlags;
 import imgui.gl3.ImGuiImplGl3;
 import imgui.glfw.ImGuiImplGlfw;
+import lol.neoclient.NeoClient;
+import meteordevelopment.meteorclient.utils.render.FontUtils;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
@@ -17,6 +19,14 @@ public class NeoImGui {
 
     public static void init() {
         ImGui.createContext();
+
+        try {
+            var stream = FontUtils.class.getResourceAsStream("/assets/neoclient/fonts/Minecraftia.ttf");
+            byte[] data = stream.readAllBytes();
+            ImGui.getIO().getFonts().addFontFromMemoryTTF(data, 22);
+        } catch (Exception e) {
+            NeoClient.LOG.warn("Failed to load Minecraftia.ttf, using default ImGui font.");
+        }
 
         // Enable viewports
         ImGui.getIO().addConfigFlags(ImGuiConfigFlags.ViewportsEnable);
