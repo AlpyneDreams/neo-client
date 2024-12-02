@@ -2,6 +2,7 @@
 package lol.neoclient.gui;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import imgui.ImGui;
 import imgui.flag.ImGuiTableColumnFlags;
@@ -86,8 +87,7 @@ public class NeoGui {
                     ImGui.tableNextRow();
 
                     ImGui.tableNextColumn();
-                    //ImGui.textUnformatted(dateFormat.format(new Date(info.time)));
-                    ImGui.textUnformatted("" + ImGui.getCursorPosY() + " / ");
+                    ImGui.textUnformatted(dateFormat.format(new Date(info.time)));
 
                     ImGui.tableNextColumn();
                     ImGui.textUnformatted(info.side == NetworkSide.SERVERBOUND ? "Client" : "Server");
