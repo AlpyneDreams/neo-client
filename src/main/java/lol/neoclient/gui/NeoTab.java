@@ -5,7 +5,6 @@ import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.tabs.Tab;
 import meteordevelopment.meteorclient.gui.tabs.TabScreen;
 import meteordevelopment.meteorclient.gui.tabs.Tabs;
-import meteordevelopment.meteorclient.pathing.PathManagers;
 import meteordevelopment.meteorclient.utils.PreInit;
 import net.minecraft.client.gui.screen.Screen;
 
@@ -14,7 +13,7 @@ public class NeoTab extends Tab {
         super("Neo");
     }
 
-    @PreInit(dependencies = PathManagers.class)
+    @PreInit
     public static void init() {
         Tabs.add(new NeoTab());
     }

@@ -74,9 +74,9 @@ dependencies {
     library("io.netty:netty-codec-socks:${project.netty_version}") { transitive = false }
     library "de.florianmichael:WaybackAuthLib:${project.waybackauthlib_version}"
 
-    implementation "io.github.spair:imgui-java-binding:${project.imgui_version}"
-    implementation "io.github.spair:imgui-java-lwjgl3:${project.imgui_version}"
-    implementation "io.github.spair:imgui-java-natives-windows:${project.imgui_version}"
+    library "io.github.spair:imgui-java-binding:${project.imgui_version}"
+    library "io.github.spair:imgui-java-lwjgl3:${project.imgui_version}"
+    library "io.github.spair:imgui-java-natives-windows:${project.imgui_version}"
 
     // Launch sub project
     shadow project(":launch")
